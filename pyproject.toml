@@ -5,31 +5,26 @@ build-backend = "hatchling.build"
 [project]
 name = "landing-page"
 dynamic = ["version"]
-description = ''
+description = 'A Personalized Landing Page showcasing Achievements,Accolades,Skills etc.,'
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 license = "MIT"
-keywords = []
+keywords = ["Landing page"]
 authors = [
-  { name = "U.N. Owen", email = "void@some.where" },
+  { name = "Deepak Sanjay S J", email = "deepaksanjaysj@gmail.com" },
 ]
 classifiers = [
-  "Development Status :: 4 - Beta",
+  "Development Status :: 1 - Planning",
+  "Framework :: Flask",
+  "Framework :: Hatch",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: 3.12",
-  "Programming Language :: Python :: Implementation :: CPython",
-  "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = []
 
 [project.urls]
-Documentation = "https://github.com/U.N. Owen/landing-page#readme"
-Issues = "https://github.com/U.N. Owen/landing-page/issues"
-Source = "https://github.com/U.N. Owen/landing-page"
+Documentation = "https://github.com/DeepakSan/landing-page/blob/main/README.md"
+Source = "https://github.com/DeepakSan/landing-page/tree/main"
 
 [tool.hatch.version]
 path = "src/landing_page/__about__.py"

@@ -1,0 +1,1 @@
+CONFIG_PATH = 'src.landing_page.config.Config'

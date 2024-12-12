@@ -366,25 +366,23 @@
     font-size: 1.8rem;
     transition: transform 0.2s ease-in-out;
   }
-  /* Container for the experience list */
-.experience-container {
+
+  .experience-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
+    align-items: center; 
     justify-content: center;
     margin: 50px auto;
     max-width: 600px;
-    text-align: center; /* Center text */
+    text-align: center; 
   }
   
-  /* Style for each experience item */
   .experience-item {
     margin-bottom: 30px;
     position: relative;
-    width: 100%; /* Make the item take full width */
+    width: 100%; 
   }
   
-  /* Experience details box */
   .experience-details {
     border: 1px solid #dfe4ea;
     border-radius: 10px;
@@ -394,13 +392,11 @@
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
   
-  /* Hover effect on the experience details box */
   .experience-item:hover .experience-details {
-    transform: translateY(-10px); /* Slight upward shift */
+    transform: translateY(-10px); 
     background-color: #e9ecef;
   }
   
-  /* Year styling */
   .experience-year {
     font-size: 1.2em;
     font-weight: bold;
@@ -408,14 +404,12 @@
     margin: 0;
   }
   
-  /* Title styling */
   .experience-title {
     font-size: 1.3em;
     color: #343a40;
     margin-top: 10px;
   }
   
-  /* Description styling */
   .experience-description {
     color: #6c757d;
     font-size: 1em;

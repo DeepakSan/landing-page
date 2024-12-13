@@ -1,15 +1,24 @@
+import os
 from flask import Flask, render_template
 from .helpers.constants import CONFIG_PATH
 from .helpers.logging import create_logger
 from .extensions import db, migrate
 from . import model
 
-def create_app(ENV='dev'):
+def create_app():
     app = Flask(__name__)
 
-    app.config.from_object(CONFIG_PATH+f'{ENV}Config')
-    logger = create_logger(app)
-    logger.debug(f"Loading configuration: {CONFIG_PATH + f'{ENV}Config'}")
+    environment = os.getenv('FLASK_ENV', 'development')
+    if environment == 'production':
+        app.config.from_object(CONFIG_PATH+'prodConfig')
+        logger = create_logger(app)
+        logger.debug(f"Loading configuration: {CONFIG_PATH + 'prodConfig'}")
+
+    else:
+        app.config.from_object(CONFIG_PATH+'devConfig')
+        logger = create_logger(app)
+        logger.debug(f"Loading configuration: {CONFIG_PATH + 'devConfig'}")
+
 
     db.init_app(app)
     logger.debug(f"Initialized database")

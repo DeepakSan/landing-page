@@ -1,4 +1,4 @@
-FROM python3:latest
+FROM python:3.10
 
 RUN python -m pip install hatch
 
@@ -10,4 +10,4 @@ EXPOSE 5000
 
 RUN hatch env create
 
-CMD ["hatch","run","dev:build"]
+CMD ["hatch","run","prod:build"]

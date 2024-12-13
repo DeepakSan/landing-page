@@ -20,7 +20,13 @@ classifiers = [
   "Programming Language :: Python",
   "Programming Language :: Python :: 3.10",
 ]
-dependencies = []
+dependencies = [
+"Flask",
+"python-dotenv",
+"Flask-SQLAlchemy",
+"psycopg2-binary",
+"Flask-Migrate",
+]
 
 [project.urls]
 Documentation = "https://github.com/DeepakSan/landing-page/blob/main/README.md"
@@ -28,6 +34,19 @@ Source = "https://github.com/DeepakSan/landing-page/tree/main"
 
 [tool.hatch.version]
 path = "src/landing_page/__about__.py"
+
+[tool.hatch.envs.dev]
+
+[tool.hatch.envs.dev.scripts]
+build = "flask db upgrade && flask run"
+
+[tool.hatch.envs.prod]
+extra-dependencies = [
+  "gunicorn"
+]
+
+[tool.hatch.envs.prod.scripts]
+build = "flask db upgrade && gunicorn -b 127.0.0.1:5000 -w 4 'src.landing_page.app:create_app()'"
 
 [tool.hatch.envs.types]
 extra-dependencies = [

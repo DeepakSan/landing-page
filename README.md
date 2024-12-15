@@ -25,13 +25,6 @@ Clone this repo
 ```console
 git clone <>
 ```
-
-Create environment files in your local
-
-```console
-touch .env
-touch .flaskenv
-```
 Copy the contents of .env and .flaskenv in config templates 
 
 ```console
